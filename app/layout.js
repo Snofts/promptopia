@@ -6,6 +6,9 @@ import "@styles/globals.css";
 export const metadata = {
   title: "Promptopia",
   description: "A platform for creating and sharing prompts.",
+  icons: {
+    icon: "/assets/images/logo.svg", // or "/favicon.png", "/favicon.svg"
+  },
 };
 
 const RootLayout = ({ children }) => {
