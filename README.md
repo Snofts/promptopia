@@ -1,37 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Promptopia
+
+Promptopia is a modern, full-stack web application built with **Next.js 13, MongoDB, and Tailwind CSS**. It allows users to create, share, and discover AI prompts.
+
+## Features
+
+* User authentication with **NextAuth.js**
+* Create, edit, and delete prompts
+* Search prompts by **tag, keyword, or username**
+* View and explore **other users’ profiles**
+* Responsive design with Tailwind CSS
+* Server-side rendering (SSR) and optimized performance with Next.js
+
+## Tech Stack
+
+* **Frontend:** Next.js 13, React, Tailwind CSS
+* **Backend:** Next.js API Routes
+* **Database:** MongoDB & Mongoose
+* **Authentication:** NextAuth.js
+* **Deployment:** Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+* Node.js (v18 or higher)
+* MongoDB (local or Atlas)
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/promptopia.git
+cd promptopia
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Set up environment variables in `.env.local`:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  ├── api/        # API routes
+  ├── profile/    # User profile pages
+  ├── globals.css # Global styles
+components/
+  ├── Feed.js
+  ├── PromptCard.js
+  ├── Profile.js
+models/
+  ├── prompt.js
+  ├── user.js
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Easily deploy on [Vercel](https://vercel.com) with GitHub integration.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
+Would you like me to also include a **"Contributing"** and **"Future Improvements"** section so it feels more professional, like open-source projects?
