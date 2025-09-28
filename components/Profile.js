@@ -1,5 +1,5 @@
 import React from "react";
-import PromptCard from "./PromptCard.jsx";
+import PromptCard from "./PromptCard.js";
 import {useSession} from "next-auth/react";
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => { 
