@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import {useSession} from "next-auth/react"
 import { useRouter, useSearchParams, } from "next/navigation";
 
 import Form from "@components/form";
 
-const EditPrompt = () => {
+const EditPromptContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams()
   const promptId = searchParams.get('id')
@@ -69,4 +69,10 @@ const EditPrompt = () => {
   );
 };
 
-export default EditPrompt;
+export default function EditPrompt() {
+  return (
+    <Suspense fallback={<div>Loading prompt editor...</div>}>
+      <EditPromptContent />
+    </Suspense>
+  );
+}
